@@ -68,7 +68,7 @@ function boom() {
     setTimeout(function () {
         var synth = window.speechSynthesis;
         img_id = "selfie3";
-        speak_data = "Taking your next Selfie in 10 seconds";
+        speak_data = "Taking your next Selfie in 15 seconds";
         var utterThis = new SpeechSynthesisUtterance(speak_data);
         synth.speak(utterThis);
         take_snapshot();
