@@ -73,6 +73,15 @@ function boom() {
         synth.speak(utterThis);
         take_snapshot();
     }, 15000);
+    setTimeout(function () {
+        var synth = window.speechSynthesis;
+        img_id = "selfie4";
+        console.log("Toke 4 Selfie")
+        speak_data = "Toke 4 Selfies";
+        var utterThis = new SpeechSynthesisUtterance(speak_data);
+        synth.speak(utterThis);
+        take_snapshot();
+    },20000);
 
 }
 
@@ -89,6 +98,9 @@ function take_snapshot() {
         }
         if (img_id == "selfie3") {
             document.getElementById("result3").innerHTML = '<img id="selfie3" src="' + data_uri + '"/>';
+        }
+        if (img_id == "selfie4") {
+            document.getElementById("result4").innerHTML = '<img id="selfie4" src="' + data_uri + '"/>';
         }
 
     });
