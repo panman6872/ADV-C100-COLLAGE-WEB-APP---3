@@ -7,6 +7,7 @@ function start()
 {
     document.getElementById("textbox").innerHTML = "";
     recognition.start();
+    boom();
 }
 
 recognition.onresult = function (event){
@@ -47,14 +48,15 @@ Webcam.set({
 });
 Webcam.attach('#camera');
 
-setTimeout(function(){
+function boom(){setTimeout(function(){
     var synth = window.speechSynthesis;
     img_id = "selfie1";
     speak_data = "Taking your next Selfie in 10 seconds";
     var utterThis = new SpeechSynthesisUtterance(speak_data);
     synth.speak(utterThis);
     take_snapshot();
-}, 10000);
+}, 10000);}
+
 
 function take_snapshot()
 {
